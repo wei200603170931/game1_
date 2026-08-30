@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+    int N;
+    scanf("%d",&N);
+    char S[N+1];
+    char T[N+1];
+    scanf("%s",S);
+    scanf("%s",T);
+    int count=0;
+    int count2=0;
+    for (int i = 0; i<N;i++) {
+        if (S[i]!=T[i]) {
+            if (S[i]=='R' &&T[i]=='P') {
+                count2++;
+            }
+            else if (S[i]=='S' &&T[i]=='P') {
+                count++;
+            }
+            else if (S[i]=='S' &&T[i]=='R') {
+                count2++;
+            }
+        }
+    }
+    printf("%d\n",count);
+    printf("%d\n",count2);
+    return 0;
+}
